@@ -20,11 +20,34 @@ import BackgroundHouse from '../../assets/backgrounds/house.png';
 //Icons
 import IconLightOn from '../../assets/icons/lightOn.png';
 import IconLightOff from '../../assets/icons/lightOff.png';
+import IconDoorOpenA from '../../assets/icons/doorOpenA.png';
+import IconDoorOpenB from '../../assets/icons/doorOpenB.png';
+import IconDoorOpenC from '../../assets/icons/doorOpenC.png';
+import IconDoorClosedA from '../../assets/icons/doorClosedA.png';
+import IconDoorClosedB from '../../assets/icons/doorClosedB.png';
+import IconDoorClosedC from '../../assets/icons/doorClosedC.png';
 
 export default class Signals extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            //Doors-------------------------------
+            //Bathroom
+            doorBathroomState: false,
+            doorBathroomIcon: IconDoorClosedC,
+            //Bedroom 1
+            doorBedroom1State: false,
+            doorBedroom1Icon : IconDoorClosedB,
+            //Bedroom 2
+            doorBedroom2State: false,
+            doorBedroom2Icon : IconDoorClosedC,
+            //Front
+            doorFrontState: false,
+            doorFrontIcon : IconDoorClosedA,
+            //Back
+            doorBackState: false,
+            doorBackIcon : IconDoorClosedA,
+            //Lights------------------------------
             //Bathroom
             lightBathroomState: false,
             lightBathroomIcon : IconLightOff,
@@ -40,6 +63,7 @@ export default class Signals extends Component {
             //Bedroom 2
             lightBedroom2State: false,
             lightBedroom2Icon : IconLightOff,
+            //------------------------------------
           };
     }
 
@@ -104,30 +128,40 @@ export default class Signals extends Component {
 
     render() {
         return (
-            <ImageBackground    style={styles.signalsScreenBackground} 
-                                source={BackgroundHouse}   
-                                resizeMode="contain"
+            <ImageBackground    style = {styles.signalsScreenBackground} 
+                                source = {BackgroundHouse}   
+                                resizeMode = "contain"
                                 >
                 <TouchableOpacity   onPress={() => this._clickEventListener(1)} >
                     <Image  style = {styles.bathroomButton} 
-                            source={this.state.lightBathroomIcon}/>
+                            source = {this.state.lightBathroomIcon}/>
                 </TouchableOpacity>
                 <TouchableOpacity   onPress={() => this._clickEventListener(2)} >
                     <Image  style = {styles.kitchenButton} 
-                            source={this.state.lightKitchenIcon}/>
+                            source = {this.state.lightKitchenIcon}/>
                 </TouchableOpacity>
                 <TouchableOpacity   onPress={() => this._clickEventListener(3)} >
                     <Image  style = {styles.livingRoomButton} 
-                            source={this.state.lightLivingRoomIcon}/>
+                            source = {this.state.lightLivingRoomIcon}/>
                 </TouchableOpacity>
                 <TouchableOpacity   onPress={() => this._clickEventListener(4)} >
                     <Image  style = {styles.bedroom1Button} 
-                            source={this.state.lightBedroom1Icon}/>
+                            source = {this.state.lightBedroom1Icon}/>
                 </TouchableOpacity>
                 <TouchableOpacity   onPress={() => this._clickEventListener(5)} >
                     <Image  style = {styles.bedroom2Button} 
-                            source={this.state.lightBedroom2Icon}/>
-                </TouchableOpacity>                
+                            source = {this.state.lightBedroom2Icon}/>
+                </TouchableOpacity>    
+                <Image  style = {styles.bathroomDoor} 
+                        source = {this.state.doorBathroomIcon}/> 
+                <Image  style = {styles.bedroom1Door} 
+                        source = {this.state.doorBedroom1Icon}/>     
+                <Image  style = {styles.bedroom2Door} 
+                        source = {this.state.doorBedroom2Icon}/>     
+                <Image  style = {styles.frontDoor} 
+                        source = {this.state.doorFrontIcon}/>       
+                <Image  style = {styles.backDoor} 
+                        source = {this.state.doorBackIcon}/>  
             </ImageBackground>
         );
     }

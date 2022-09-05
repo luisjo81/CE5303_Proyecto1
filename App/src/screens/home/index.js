@@ -68,40 +68,41 @@ export default class Home extends Component {
     //Selects an option depending of the list item touched
     _clickEventListener(key) {
         if(key === 1){
-            this.props.navigation.navigate('Signals');
+          this.props.navigation.navigate('Signals');
         }
         if(key === 2){
-            alert('Under Construction')
+          this.props.navigation.navigate('Camera');
         }
         if(key === 3){
             alert('Temp');
         }
         if(key === 4){
-            this.props.navigation.navigate('Login');
+          this.props.navigation.navigate('Login');
         }
     }
   
     render() {
       return (
-        <View style={styles.homeScreenMainContainer}>
-          <FlatList style={styles.homeScreenList}
-            contentContainerStyle={styles.homeScreenListContainer}
-            data={this.state.data}
-            horizontal={false}
-            numColumns={2}
-            keyExtractor= {(item) => {
+        <View style = {styles.homeScreenMainContainer}>
+          <FlatList style = {styles.homeScreenList}
+            contentContainerStyle = {styles.homeScreenListContainer}
+            data = {this.state.data}
+            horizontal = {false}
+            numColumns = {2}
+            keyExtractor = {(item) => {
               return item.key;
             }}
-            renderItem={({item}) => {
+            renderItem = {({item}) => {
               return (
                 <TouchableOpacity style={[styles.homeScreenCard, {backgroundColor:item.color}]} 
                                   onPress={() => {this._clickEventListener(item.key)}}>
-                  <View style={styles.homeScreenCardHeader}>
-                    <Text style={styles.homeScreenListTitleText}>{item.title}</Text>
+                  <View style = {styles.homeScreenCardHeader}>
+                    <Text style = {styles.homeScreenListTitleText}>{item.title}</Text>
                   </View>
-                  <Image style={styles.homeScreenCardImage} source={item.image}/>
-                  <View style={styles.homeScreenCardFooter}>
-                    <Text style={styles.homeScreenListInfoText}>{item.description}</Text>
+                  <Image  style = {styles.homeScreenCardImage} 
+                          source = {item.image}/>
+                  <View style = {styles.homeScreenCardFooter}>
+                    <Text style = {styles.homeScreenListInfoText}>{item.description}</Text>
                   </View>
                 </TouchableOpacity>
               )

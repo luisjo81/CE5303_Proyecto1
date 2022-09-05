@@ -20,12 +20,14 @@ import {
 import HomeScreen from './src/screens/home';
 import LoginScreen from './src/screens/login';
 import SignalsScreen from './src/screens/signals';
+import CameraScreen from './src/screens/camera';
 
 //Stack Navigator
 const MainNavigator = createStackNavigator({
   Login: { screen: LoginScreen },
   Home: { screen: HomeScreen },
-  Signals: { screen: SignalsScreen }
+  Signals: { screen: SignalsScreen },
+  Camera: { screen: CameraScreen}
 });
 
 const App = createAppContainer(MainNavigator);
