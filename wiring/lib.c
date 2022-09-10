@@ -8,6 +8,12 @@
 #define H1 25
 #define SALA 26
 
+#define DBANO 1
+#define DTERRAZA 2
+#define DH2 3
+#define DH1 4
+#define DSALA 5
+
 wiringPiSetup();
 pinMode(BANO, OUTPUT);
 pinMode(COME, OUTPUT);
@@ -80,4 +86,24 @@ void luzSala(int l){
         digitalWrite(SALA, HIGH);
     }
     
+}
+
+int Dbano(){   
+    return digitalRead(DBANO);   
+}
+
+void Dterraza(int l){   
+    return digitalRead(DTERRAZA);   
+}
+
+void DH1(int l){   
+    return digitalRead(DH1);   
+}
+
+void DH2(int l){   
+    return digitalRead(DH2);   
+}
+
+void Dsala(int l){   
+    return digitalRead(DSALA);   
 }

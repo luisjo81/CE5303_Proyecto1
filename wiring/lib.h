@@ -7,5 +7,10 @@ void luzCocina(int l);
 void luzH2(int l);
 void luzH1(int l);
 void luzSala(int l);
+int Dbano();
+int Dterraza();
+int DH1();
+int DH2();
+int Dsala();
 
 #endif

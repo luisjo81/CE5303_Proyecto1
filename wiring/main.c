@@ -28,7 +28,11 @@ int main(int argc, char *argv[]) {
     delay(500);
     luzSala(0);
   
-
+    printf("La terraza esta: %d", Dterraza());
+    printf("La bano esta: %d", Dbano());
+    printf("La habitacion 1 esta: %d", DH1());
+    printf("La habitacion 2 esta: %d", DH2());
+    printf("La sala esta: %d", Dsala());
 
 
 
