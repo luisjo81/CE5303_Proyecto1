@@ -24,9 +24,10 @@ import CameraScreen from './src/screens/camera';
 
 //Stack Navigator
 const MainNavigator = createStackNavigator({
+  Signals: { screen: SignalsScreen },
   Login: { screen: LoginScreen },
   Home: { screen: HomeScreen },
-  Signals: { screen: SignalsScreen },
+  
   Camera: { screen: CameraScreen}
 });
 

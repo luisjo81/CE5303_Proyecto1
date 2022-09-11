@@ -132,6 +132,16 @@ const styles = StyleSheet.create({
         left: 75,
         right: 0
     },
+    bathroomDoor: {
+        position: 'absolute',
+        padding: 15,
+        height: 40,
+        width: 40,
+        top: 60,
+        bottom: 0,
+        left: 188,
+        right: 0
+    },
     kitchenButton: {
         position: 'absolute',
         padding: 15,
@@ -162,6 +172,16 @@ const styles = StyleSheet.create({
         left: -110,
         right: 50
     },
+    bedroom1Door: {
+        position: 'absolute',
+        padding: 15,
+        height: 40,
+        width: 40,
+        top: 380,
+        bottom: 0,
+        left: 98,
+        right: 50
+    },
     bedroom2Button: {
         position: 'absolute',
         padding: 15,
@@ -172,10 +192,54 @@ const styles = StyleSheet.create({
         left: 55,
         right: 0
     },
-    signalsScreenMainContainer: {
+    bedroom2Door: {
+        position: 'absolute',
+        padding: 15,
+        height: 40,
+        width: 40,
+        top: 220,
+        bottom: 0,
+        left: 150,
+        right: 0
+    },
+    frontDoor: {
+        position: 'absolute',
+        padding: 15,
+        height: 40,
+        width: 40,
+        top: 443,
+        bottom: 0,
+        left: 200,
+        right: 0
+    },
+    backDoor: {
+        position: 'absolute',
+        padding: 15,
+        height: 40,
+        width: 40,
+        top: 37,
+        bottom: 0,
+        left: 60,
+        right: 0
+    },
+    //Camera Screen
+    cameraScreenBackground: {
         flex: 1,
-        justifyContent: "center",
+        margin: 5,
+        height: '100%',
+        width: '100%',
+        justifyContent: 'center',
         alignItems: "center",
+    },
+    cameraButton: {
+        position: 'absolute',
+        padding: 15,
+        height: 80,
+        width: 80,
+        top: 400,
+        bottom: 0,
+        left: 117,
+        right: 0
     }
 })
 
